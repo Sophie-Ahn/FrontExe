@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const button = document.getElementById("btnStart");
+        button.addEventListener("click", () => {
+          const luckyVal = parseInt(Math.random() * 10 + 1);
+          console.log(luckyVal);
+          switch (luckyVal) {
+            case 3:
+              document.write("3등");
+              document.write("음료수 당첨");
+              break;
+            case 7:
+              document.write("2등");
+              document.write("아이패드 당첨");
+              break;
+            case 5:
+              document.write("1등");
+              document.write("현대 자동차 당첨");
+              break;
+            default:
+              document.write("탈락");
+              break;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btnStart">추첨</button>
+  </body>
+</html>
