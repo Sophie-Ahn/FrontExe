@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 함수 선언 - 화살표 함수, 람다식
+      let div = (num0, num1) => num0 + num1;
+      console.log(div(1, 2));
+      console.log(((num2, num3) => num2 * num3)(5, 10));
+
+      // 객체방식
+      let reminder = new Function("num0", "num1", "return num0+num1;");
+      console.log(reminder(2, 3));
+    </script>
+  </head>
+  <body></body>
+</html>

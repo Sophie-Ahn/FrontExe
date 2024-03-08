@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //default 매개변수
+      function earning(name, money = 500, hours = 20) {
+        console.log(`${name}님의 급여 정보`);
+        console.log(`${name}님의 근로 시간: ${hours}`);
+        console.log(`${name}님의 시급: ${money * hours}`);
+      }
+
+      earning("seulki");
+    </script>
+  </head>
+  <body></body>
+</html>
