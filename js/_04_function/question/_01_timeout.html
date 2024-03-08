@@ -1,6 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const text = document.querySelector(".text");
+        let textSet;
 
-<!-- 
+        setTimeout(function () {
+          text.style.display = "block";
+        }, 3000);
+      });
+    </script>
+    <style>
+      .box {
+        width: 600px;
+        height: 600px;
+        border: 1px solid #999;
+      }
+      .text {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2 class="text">안녕하세요. 환영합니다.</h2>
+    </div>
+    <!-- 
     상자를 600px로 넓힌 후에 
     3초후에 '안녕하세요. 환영합니다.'를 
     상자에 출력하세요. 
 -->
+  </body>
+</html>

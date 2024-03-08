@@ -1,4 +1,31 @@
-<!-- 
-숫자가 0.1초마다 1씩 증가하는데
-버튼을 누르면 타이머가 멈추도록 작성하세요 
--->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 		숫자가 0.1초마다 1씩 증가하는데
+      // 버튼을 누르면 타이머가 멈추도록 작성하세요
+      document.addEventListener("DOMContentLoaded", () => {
+        let count = 0;
+        let id;
+        let btn = document.getElementsByTagName("button");
+
+        id = setInterval(function () {
+          console.log(count);
+          count++;
+        }, 100);
+
+        document.addEventListener("click", () => {
+          setTimeout(function () {
+            clearInterval(id);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button>누르기</button>
+  </body>
+</html>
