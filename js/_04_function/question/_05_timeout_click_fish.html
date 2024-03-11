@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #panel {
+        border: 1px solid #000;
+        width: 600px;
+        height: 600px;
+        text-align: center;
+      }
+      #score {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        display: block;
+        padding: 20px 0;
+      }
+    </style>
+    <script>
+      // 물고기를 상자에 띄우고
+      // 물고기를 5초안에 최대한 클릭할 것
+      // 클릭한 횟수가 상자위에 출력될 것
+      // 5초가 지나면 더 이상 클릭횟수 증가하지 않음.
+      document.addEventListener("DOMContentLoaded", () => {
+        let count = 0;
+        const INTERVAL = 5000;
+        let isPlaying = true;
+        let score = document.querySelector("#score");
+        let fish = document.querySelector("#fish");
+
+        fish.addEventListener("click", () => {
+          if (isPlaying) {
+            score.textContent = ++count;
+          }
+        });
+
+        setTimeout(() => {
+          isplaying = false;
+          alert("게임종료");
+        }, 10000);
+      });
+    </script>
+  </head>
+  <body>
+    <span id="score"> 0 </span>
+    <div id="panel">
+      <img src="../../../images2/fish.png" alt="" id="fish" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #panel {
+        position: relative;
+        width: 550px;
+        height: 350px;
+        border: 1px solid #000;
+      }
+      #fish {
+        position: absolute;
+        top: 120px;
+        left: 50px;
+      }
+      #bar {
+        width: 438px;
+        height: 20px;
+        position: absolute;
+        left: 50px;
+        bottom: 100px;
+        background-color: tomato;
+      }
+    </style>
+    <script>
+      // move_fish에서 button을 2개 생성
+      // 1개는 '시작' 버튼
+      // 1개는 '멈춤' 버튼
+
+      // '시작' 버튼을 누르면 물고기가 자동으로 왕복 움직이도록
+      // '멈춤' 버튼을 누르면 물고기가 멈추도록
+      document.addEventListener("DOMContentLoaded", () => {
+        let fish = document.querySelector("#fish");
+        let startBtn = document.querySelector("#startBtn");
+        let closeBtn = document.querySelector("#closeBtn");
+        const MOVE_VAL = 50;
+        let step = MOVE_VAL;
+        const MAX_X = 438;
+        const MIN_X = 50;
+        let id;
+
+        startBtn.addEventListener("click", () => {
+          id = setInterval(function () {
+            let x = fish.getBoundingClientRect().left + step;
+
+            if (x >= MAX_X) {
+              x = MAX_X;
+              fish.setAttribute("src", "../../../images2/fish2.png");
+              step = -MOVE_VAL;
+            } else if (x < MIN_X) {
+              x = MIN_X;
+              fish.setAttribute("src", "../../../images2/fish1.png");
+              step = MOVE_VAL;
+            }
+
+            fish.style.left = x + "px";
+          }, 400);
+        });
+
+        closeBtn.addEventListener("click", () => {
+          setTimeout(() => {
+            clearInterval(id);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="panel">
+      <img src="../../../images2/fish.png" id="fish" />
+      <div id="bar"></div>
+    </div>
+    <div id="nav">
+      <button id="startBtn">시작</button>
+      <button id="closeBtn">멈춤</button>
+    </div>
+  </body>
+</html>

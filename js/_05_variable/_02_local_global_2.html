@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var n = "안슬기"; // 전역변수
+
+      function text() {
+        // 우선순위는 가까운 지역변수가 높다
+        var n = "안씨";
+      }
+
+      console.log(n);
+    </script>
+  </head>
+  <body></body>
+</html>
