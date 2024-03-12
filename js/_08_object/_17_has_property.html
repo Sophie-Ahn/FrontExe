@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            const object = {
+                name: "안슬기",
+                job: "학생",
+                age: 28,
+            };
+
+            if (object.name !== undefined) {
+                console.log("name 속성이 있습니다.");
+            } else {
+                console.log("name 속성이 없습니다.");
+            }
+            if (object.money !== undefined) {
+                console.log("money 속성이 있습니다.");
+            } else {
+                console.log("money 속성이 없습니다.");
+            }
+            console.log("");
+
+            if (object.name) {
+                console.log("name 속성이 있습니다.");
+            } else {
+                console.log("name 속성이 없습니다.");
+            }
+
+            if (object.money) {
+                console.log("money 속성이 있습니다.");
+            } else {
+                console.log("money 속성이 없습니다.");
+            }
+            console.log("");
+
+            // 자바스크립트에서 앞에 무조건 참이면 뒤로는 실행이 안됨
+            !object.name || console.log("name 속성이 있습니다.");
+            !object.money || console.log("money 속성이 없습니다.");
+        </script>
+    </head>
+    <body></body>
+</html>

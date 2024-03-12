@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            const i = 123.456789;
+
+            console.log(i.toFixed(2));
+            console.log(i.toFixed(3));
+            console.log(i.toFixed(4));
+
+            const m = Number("korea"); // 숫자로 형변환 시도
+            console.log(m); // NaN
+            console.log(m === NaN); //비교가 안됨
+            console.log(Number.isNaN(m)); // 비교할때는 isNaN로 사용
+
+            const n = 10 / 0;
+            console.log(n); // Infinity, 무한대
+            const o = -10 / 0;
+            console.log(o); // -Infinity, -무한대
+            console.log(Number.isFinite(n)); // finite => 제한적인 이라는 뜻을 가져서 무한대와 비교 할 때 항상 false로 나옴
+            console.log(Number.isFinite(o));
+            console.log(Number.isFinite(1));
+            console.log(Number.isFinite(10));
+            console.log(n === Infinity);
+            console.log(o === Infinity);
+            console.log("");
+        </script>
+    </head>
+    <body></body>
+</html>
