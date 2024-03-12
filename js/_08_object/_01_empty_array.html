@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            console.log(typeof []); // object
+
+            const array = ["apple", "banana", "pear", "mango", "strawberry"];
+            console.log(typeof array); // object
+
+            const result = Array.isArray(array) // boolean
+                ? "배열입니다."
+                : "배열이 아닙니다.";
+            console.log("array는 " + result);
+        </script>
+    </head>
+    <body></body>
+</html>

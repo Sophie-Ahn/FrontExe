@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            // 화살표 함수는 callback함수로 많이 쓰이지만 객체의 메서드로는 잘 안씀
+            // 일반 함수는 둘 다 사용
+
+            // 객체의 메서드로는 주로 '일반함수' 사용
+
+            const test = {
+                a: function () {
+                    console.log(this);
+                },
+                b: () => {
+                    console.log(this);
+                },
+            };
+
+            test.a(); // object - test내의 객체를 보여줌
+            test.b();
+            // 화살표함수는 전역객체로서 window를 내어줌
+        </script>
+    </head>
+    <body></body>
+</html>
