@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            // 배열에다가 객체를 넣음
+            const students = [];
+
+            students.push({
+                name: "안슬기",
+                kor: 95,
+                math: 100,
+                eng: 100,
+                sci: 88,
+            });
+            students.push({
+                name: "추경현",
+                kor: 85,
+                math: 100,
+                eng: 90,
+                sci: 100,
+            });
+            students.push({
+                name: "홍길동",
+                kor: 100,
+                math: 80,
+                eng: 70,
+                sci: 90,
+            });
+            students.push({
+                name: "일지매",
+                kor: 95,
+                math: 70,
+                eng: 60,
+                sci: 100,
+            });
+
+            let output = "이름\t\t총점\t\t평균\n";
+            for (const s of students) {
+                const sum = s.kor + s.eng + s.math + s.sci;
+                const average = sum / 4;
+                output += `${s.name}\t${sum}점\t${average}점\n`;
+            }
+            console.log(output);
+        </script>
+    </head>
+    <body></body>
+</html>
